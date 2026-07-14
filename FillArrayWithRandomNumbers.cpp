@@ -42,6 +42,8 @@ void PrintArr(int arr[100] , int length)
 
 int main ()
 {
+    srand((unsigned)time(NULL));
+    
     int arr[10];
     int len = ReadPositiveNumber("enter please number : ");
 
