@@ -32,7 +32,7 @@ void FillArrayWithRandomNumbers(int arr[100], int &length, int From, int To)
 }
 void PrintArr(int arr[100] , int length)
 {
-    cout << "array Elemnte is ";
+    cout << "array Elemnet is ";
     for (int  i = 0; i < length; i++)
     {
          cout << arr[i] << "   ";
@@ -40,29 +40,24 @@ void PrintArr(int arr[100] , int length)
     cout << "\n";
 }
 
-int maxNumer(int arr[100] ,  int len )
+ int sumRandomArr(int arr[100] ,  int len)
 {
-    
+    int sum = 0;
 
-    int max =  0;
-    for (int i = 0; i < len ; i++)
+    for (int i = 0; i < len; i++)
     {
-        if ( max <= arr[i])
-        {
-            max = arr[i];
-        }
-        
-
-       
+        sum += arr[i];
     }
- return max;
+    
 }
+
+
 
 int main ()
 {
     srand((unsigned)time(NULL));
 
-    int arr[10];
+    int arr[100];
     int len = ReadPositiveNumber("enter please number : ");
 
     int To = ReadPositiveNumber(" ===>>>> To :  ");
@@ -71,6 +66,5 @@ int main ()
     FillArrayWithRandomNumbers (arr , len , To , From);
     PrintArr(arr , len);
 
-    cout  <<  "max Number is:    " << maxNumer(arr , len) << endl;
+    cout  <<  "average Number is:   " << (double)sumRandomArr(arr , len) / len << endl;
 }
-
